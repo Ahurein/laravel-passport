@@ -18,7 +18,7 @@ class ForgetController extends Controller
         if(User::where('email', $email)->doesntExist()){
             return response([
                 'message'=> 'Email does not exist'
-            ], 400);
+            ]);
         }
 
         $token = rand(10, 100000);
